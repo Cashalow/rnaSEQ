@@ -1,4 +1,4 @@
-for i in $(ls *_fastqc)
+for i in $(ls -d *_fastqc)
 do
   cd $i;
   sed -n '/Overrepresented/,$p' fastqc_data.txt | sed '/>>END_MODULE/q' | tail -n +2 | head -n -1 > overrepresented_sequences.txt;
