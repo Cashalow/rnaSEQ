@@ -5,3 +5,4 @@ do
   tail -n +2 overrepresented_sequences.txt | cut -f 1 | sed -e 's/^/>Seq\n/' > overrepresented_sequences.fasta
   tail -n +2 overrepresented_sequences.txt | cut -f 3 | awk '{s+=$1} END {print s}' > total_percent_overrepresented.txt
   cd ..;
+  done
